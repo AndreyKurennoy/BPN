@@ -37,7 +37,7 @@ Route::delete('/collection/{id}', [
     'uses' => 'Api\CollectionController@deleteCollection'
 ]);
 
-Route::post('/user', [
+Route::post('/user/', [
     'uses' => 'Api\UserController@signup'
 ]);
 
