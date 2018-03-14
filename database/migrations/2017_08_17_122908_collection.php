@@ -25,6 +25,9 @@ class Collection extends Migration
             $table->string('wind_min');
             $table->string('wind_max');
             $table->string('angle');
+            $table->string('description');
+            $table->string('description_title');
+            $table->string('name');
             $table->timestamps();
         });
     }

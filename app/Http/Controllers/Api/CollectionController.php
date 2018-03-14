@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Requests\CollectionRequest;
-use App\Models\Collection;
+use App\Models\collection;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Tymon\JWTAuth\Facades\JWTAuth;
@@ -16,7 +16,7 @@ class CollectionController extends Controller
         $collections = Collection::all();
         $response = [
           'collections' => $collections,
-            'user' => $user
+//            'user' => $user
         ];
         return response()->json($response);
     }

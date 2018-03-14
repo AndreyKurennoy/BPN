@@ -19,7 +19,9 @@ class collection extends Model
         'wind_min',
         'wind_max',
         'angle',
-        'description'
+        'description',
+        'description_title',
+        'name'
     ];
 
 

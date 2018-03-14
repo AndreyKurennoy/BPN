@@ -34,7 +34,9 @@ class CollectionRequest extends FormRequest
             'wind_min' => 'required',
             'wind_max' => 'required',
             'angle' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'description_title' => 'required',
+            'name' => 'required'
         ];
     }
 }
