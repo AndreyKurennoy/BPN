@@ -16,3 +16,31 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/collections', [
+    'uses' => 'Api\CollectionController@getCollections'
+]);
+
+Route::get('/collection/{id}', [
+    'uses' => 'Api\CollectionController@getCollection'
+]);
+
+Route::post('/collection', [
+    'uses' => 'Api\CollectionController@saveCollection'
+]);
+
+Route::put('/collection/{id}', [
+    'uses' => 'Api\CollectionController@updateCollection'
+]);
+
+Route::delete('/collection/{id}', [
+    'uses' => 'Api\CollectionController@deleteCollection'
+]);
+
+Route::post('/user', [
+    'uses' => 'Api\UserController@signup'
+]);
+
+Route::post('/user/signin', [
+    'uses' => 'Api\UserController@signin'
+]);

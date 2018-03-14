@@ -9,7 +9,8 @@
         "bootstrap-plus/bootstrap-media-lightbox": "^3.0",
         "guzzlehttp/guzzle": "^6.0",
         "laravel/framework": "5.4.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "tymon/jwt-auth": "^0.5.12"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
