@@ -23,4 +23,21 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-//$factory->define(App\User::class, function (Faker\Generator $faker))
+$factory->define(App\Models\collection::class, function (Faker\Generator $faker) {
+
+    return [
+        'warranty' => $faker->sentence(2),
+        'weight' => $faker->sentence(2),
+        'size' => $faker->sentence(2),
+        'length_of_sheets' => $faker->sentence(2),
+        'quantity_of_sheets' => $faker->sentence(2),
+        'quantity_of_boxes' => $faker->sentence(2),
+        'protrusion' => $faker->sentence(2),
+        'wind_min' => $faker->sentence(2),
+        'wind_max' => $faker->sentence(2),
+        'angle' => $faker->sentence(2),
+        'description' => $faker->sentence(2),
+        'description_title' => $faker->sentence(2),
+        'name' => $faker->sentence(2)
+    ];
+});

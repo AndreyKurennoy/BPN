@@ -23,11 +23,11 @@ class ApiLoginTest extends TestCase
     public function testSignInSuccess()
     {
         $user = factory(User::class)->create([
-            'email' => 'testuser@mail.com',
+            'email' => 'testuser1@mail.com',
             'password' => bcrypt('test1234')
         ]);
 
-        $payload = ['email' => 'testuser@mail.com', 'password' => 'test1234'];
+        $payload = ['email' => 'testuser1@mail.com', 'password' => 'test1234'];
 
         $this->json('POST', 'api/user/signin', $payload)
             ->assertStatus(200)

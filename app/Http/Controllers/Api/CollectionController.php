@@ -10,13 +10,12 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 
 class CollectionController extends Controller
 {
-    public function getCollections()
+    public function getCollections(Request $request)
     {
-        $user = JWTAuth::parseToken()->toUser();
+        $user = JWTAuth::toUser($request->token);
         $collections = Collection::all();
         $response = [
           'collections' => $collections,
-//            'user' => $user
         ];
         return response()->json($response);
     }
