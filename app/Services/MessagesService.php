@@ -15,5 +15,6 @@ class MessagesService
         $message->created_at = time();
         $message->save();
 
+        return $message;
     }
 }
